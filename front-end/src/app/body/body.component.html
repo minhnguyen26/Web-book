@@ -1,7 +1,7 @@
 <div class="">
     <main>
     <section class="container">
-        <!-- SẢN PHẨM PHỔ BIẾN -->
+        <!-- SẢN PHẨM  start -->
         <h3 class="component-ttl"><span><b>SẢN PHẨM PHỔ BIẾN</b></span></h3>
         <div class="fr-wrap row">
                 <ul class="fr-pop-tabs sections-show">
@@ -34,7 +34,7 @@
                                                 <p class="prod-sticker-1">NEW</p>
                                             </div>
                                             <h3><a href="#">{{book.name}}</a></h3>
-                                            <p class="prod-i-price">{{book.giatien}}Đ</p>
+                                            <p class="prod-i-price">{{book.price}}Đ</p>
                                         </div>
                                     </div>
                                 </div>
@@ -806,6 +806,9 @@
                         </ul>
 
                     </div>
+        <!-- SẢN PHẨM end -->
+
+        <!-- Special offer start-->
                 </div>
                 <div class="discounts-wrap col-lg-2">
                     <h3 class="component-ttl"><span>Ưu đãi đặc biệt</span></h3>
@@ -827,10 +830,10 @@
                             </li>
                             <li class="discounts-i">
                                 <a href="product.html" class="discounts-i-img">
-                                    <img src="http://placehold.it/99x120" alt="Similique delectus">
+                                    <img [src]="inforbook.src" alt="Similique delectus">
                                 </a>
                                 <h3 class="discounts-i-ttl">
-                                    <a href="product.html">Similique delectus</a>
+                                    <a href="product.html">{{inforbook1.name}}</a>
                                 </h3>
                                 <p class="discounts-i-price">
                                     <b>$105</b> <del>$120</del>
@@ -838,10 +841,10 @@
                             </li>
                             <li class="discounts-i">
                                 <a href="product.html" class="discounts-i-img">
-                                    <img src="http://placehold.it/75x120" alt="Adipisci nemo">
+                                    <img [src]="inforbook1.src" alt="Adipisci nemo">
                                 </a>
                                 <h3 class="discounts-i-ttl">
-                                    <a href="product.html">Adipisci nemo</a>
+                                    <a href="product.html">{{inforbook2.name}}</a>
                                 </h3>
                                 <p class="discounts-i-price">
                                     <b>$70</b> <del>$90</del>
@@ -849,10 +852,10 @@
                             </li>
                             <li class="discounts-i">
                                 <a href="product.html" class="discounts-i-img">
-                                    <img src="http://placehold.it/65x120" alt="Ullam harum">
+                                    <img [src]="inforbook3.src" alt="Ullam harum">
                                 </a>
                                 <h3 class="discounts-i-ttl">
-                                    <a href="product.html">Ullam harum</a>
+                                    <a href="product.html">{{inforbook3.name}}</a>
                                 </h3>
                                 <p class="discounts-i-price">
                                     <b>$55</b> <del>$75</del>
@@ -860,10 +863,10 @@
                             </li>
                             <li class="discounts-i">
                                 <a href="product.html" class="discounts-i-img">
-                                    <img src="http://placehold.it/78x120" alt="Similique delectus">
+                                    <img [src]="inforbook4.src" alt="Similique delectus">
                                 </a>
                                 <h3 class="discounts-i-ttl">
-                                    <a href="product.html">Similique delectus</a>
+                                    <a href="product.html">{{inforbook4.name}}</a>
                                 </h3>
                                 <p class="discounts-i-price">
                                     <b>$135</b> <del>$155</del>
@@ -871,10 +874,10 @@
                             </li>
                             <li class="discounts-i">
                                 <a href="product.html" class="discounts-i-img">
-                                    <img src="http://placehold.it/81x120" alt="Туфли Dr.Koffer">
+                                    <img [src]="inforbook.src" alt="Туфли Dr.Koffer">
                                 </a>
                                 <h3 class="discounts-i-ttl">
-                                    <a href="product.html">Туфли Dr.Koffer</a>
+                                    <a href="product.html">{{inforbook5.name}}</a>
                                 </h3>
                                 <p class="discounts-i-price">
                                     <b>$190</b> <del>$210</del>
@@ -882,10 +885,10 @@
                             </li>
                             <li class="discounts-i">
                                 <a href="product.html" class="discounts-i-img">
-                                    <img src="http://placehold.it/117x120" alt="Quod consequatur">
+                                    <img [src]="inforbook3.src" alt="Quod consequatur">
                                 </a>
                                 <h3 class="discounts-i-ttl">
-                                    <a href="product.html">Quod consequatur</a>
+                                    <a href="product.html">{{inforbook1.name}}</a>
                                 </h3>
                                 <p class="discounts-i-price">
                                     <b>$120</b> <del>$140</del>
@@ -893,7 +896,7 @@
                             </li>
                             <li class="discounts-i">
                                 <a href="product.html" class="discounts-i-img">
-                                    <img src="http://placehold.it/80x120" alt="Dolore fugit">
+                                    <img [src]="inforbook3.src" alt="Dolore fugit">
                                 </a>
                                 <h3 class="discounts-i-ttl">
                                     <a href="product.html">Dolore fugit</a>
@@ -910,11 +913,9 @@
                     </div>
                 </div>
             </div>
+        <!-- Special offer end -->
 
-        <!-- Special offer -->
-
-
-        <!-- Latest news -->
+        <!-- Latest news start-->
         <div class="posts-wrap">
             <div class="posts-list">
                 <div class="posts-i">
@@ -955,9 +956,9 @@
                 </div>
             </div>
         </div>
+        <!-- Latest news end-->
 
-
-        <!-- Testimonials -->
+        <!-- Testimonials start-->
         <div class="container">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
               <!-- Indicators -->
@@ -1008,30 +1009,35 @@
               </a>
             </div>
           </div>
+        <!-- Testimonials end-->
 
         <!-- Quick View Product - start -->
         <div class="modal-detail modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4> <a href="">Tran Due</a></h4>
-              </div>
-              <div class="modal-body">
-                <div class="col-sm-6" id="left-content">
-                    ảnh
-                </div>
-                <div class="col-sm-6" id="right-content">
-                    thông tin
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-s          </div>
-        </div>
+          <div class="modal-dialog" >
 
+            <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <h4>{{inforbook.name}}</h4>
+                    <div class="modal-body">
+                      <div class="col-sm-6" id="left-content">
+                        <div ><img height=550px width=500px [src]="inforbook.src" alt="{{inforbook.name}}"></div>
+                      </div>
+                      <div class="col-sm-6" id="right-content">
+                        <div class="content">Tác giả: <a href="#">{{inforbook.tacgia}}</a></div>
+                        <div class="content">Nhà cung cấp:  <a href="#">{{inforbook.ncc}}</a></div>
+                        <div class="content"> Nhà xuất bản:<a href="#">{{inforbook.nxb}}</a></div>
+                        <div class="content">Giá: <span>{{inforbook.price}}</span></div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+         </div>
+        </div>
         <!-- Quick View Product - end -->
+
     </section>
 </main>

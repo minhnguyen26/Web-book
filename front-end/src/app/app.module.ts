@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    BannerComponent,
+    BannerComponent
   ],
   imports: [
     CommonModule,
