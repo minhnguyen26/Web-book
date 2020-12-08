@@ -46,7 +46,7 @@
     <div class="header-middle">
         <div class="container header-middle-cont">
             <div class="toplogo">
-                <a href="index.html">
+                <a routerLink="/index">
                     <img src="../assets/logo.png" alt="My logo">
                 </a>
             </div>
@@ -71,9 +71,8 @@
             &nbsp;
             &nbsp;
             &nbsp;
-
                     <li>
-                        <a href="http://127.0.0.1:5501/Angular-final/front-end/src/app/header/withlist/withlist.component.html">
+                        <a routerLink="/withlist">
                             <i class="fa fa-heart"></i>
                             <span class="shop-menu-ttl">Danh sách yêu thích</span>
                             (<span id="topbar-favorites">1</span>)
@@ -81,25 +80,25 @@
                     </li>
 
                     <li>
-                        <a href="compare.html">
+                        <a routerLink="/compare">
                             <i class="fa fa-bar-chart"></i>
                             <span class="shop-menu-ttl">So sánh</span> (5)
                         </a>
                     </li>
 
                     <li class="topauth">
-                        <a href="auth.html">
+                        <a routerLink="/auth">
                             <i class="fa fa-lock"></i>
                             <span class="shop-menu-ttl">Đăng ký&nbsp;/</span>
                         </a>
-                        <a href="auth.html">
+                        <a routerLink="/auth">
                             <span class="shop-menu-ttl">Đăng nhập</span>
                         </a>
                     </li>
 
                     <li>
                         <div class="h-cart">
-                            <a href="cart.html">
+                            <a routerLink="/cart">
                               <i class="fas fa-shopping-cart"></i>
                                 <span class="shop-menu-ttl">Giỏ hàng</span>
                                 (<b>0</b>)
@@ -119,11 +118,11 @@
             <nav class="topmenu">
                 <!-- Catalog menu - start -->
                 <div class="topcatalog">
-                    <a class="topcatalog-btn" href="catalog-list.html"><span>TẤT CẢ</span> DANH MỤC</a>
+                    <a class="topcatalog-btn" routerLink="/index"><span>TẤT CẢ</span> DANH MỤC</a>
                     <ul class="topcatalog-list">
                         <li>
                             <a href="catalog-list.html">
-                                English Books
+                                SÁCH TIẾNG ANH
                             </a>
                             <i class="fa fa-angle-right"></i>
                             <ul>
@@ -388,75 +387,35 @@
 
                 <ul class="mainmenu">
                     <li>
-                        <a href="index.html" class="active">
+                        <a routerLink="/index" class="active">
                             TRANG CHỦ
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="catalog-list.html">
-                            MỤC LỤC
+                        <a routerLink="/product">
+                            SẢN PHẨM
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            FLASH SALE
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
+                        <a routerLink="/rank">
                             BẢNG XẾP HẠNG
                         </a>
                     </li>
                     <li>
-                        <a href="elements.html">
+                        <a routerLink="about-us">
                             TT về CHÚNG TÔI
                         </a>
                     </li>
                     <li class="menuitem-has-children">
-                        <a href="blog.html">
-                            Blog <i class="fa fa-angle-down"></i>
+                        <a routerLink="/blog">
+                            Blog
                         </a>
                     </li>
-                    <li class="menu-item">
-                        <a href="#">
-                            Pages <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="contacts.html">
-                                    Contacts
-                                </a>
-                            </li>
-                            <li>
-                                <a href="cart.html">
-                                    Giỏ Hàng
-                                </a>
-                            </li>
-                            <li>
-                                <a href="auth.html">
-                                    Ủy Quyền
-                                </a>
-                            </li>
-                            <li>
-                                <a href="compare.html">
-                                    So Sánh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="wishlist.html">
-                                    Danh sách yêu thích
-                                </a>
-                            </li>
-                            <li>
-                                <a href="404.html">
-                                    Error 404
-                                </a>
-                            </li>
-                        </ul>
+                    <li class="menuitem Er-404">
+                        <a routerLink="/error-404">Page 404</a>
                     </li>
-                    <li class="mainmenu-more">
-                        <span>...</span>
-                        <ul class="mainmenu-sub"></ul>
+                    <li class="menuitem contact">
+                        <a routerLink="/contact"> LIÊN HỆ </a>
                     </li>
                 </ul>
                 <!-- Main menu - end -->
