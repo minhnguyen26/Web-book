@@ -8,7 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
-import { CommonModule } from '@angular/common';
+import { CommonModule, registerLocaleData } from '@angular/common';
 import { AuthComponent } from './header/auth/auth.component';
 import { CartComponent } from './header/cart/cart.component';
 import { WithlistComponent } from './header/withlist/withlist.component';
@@ -24,6 +24,12 @@ import { QuaLuuNiemComponent } from './body/menu-body/qua-luu-niem/qua-luu-niem.
 import { VanPhongPhamComponent } from './body/menu-body/van-phong-pham/van-phong-pham.component';
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
 import { ContactComponent } from './header/menu-top/contact/contact.component';
+import { CheckoutComponent } from './header/cart/checkout/checkout.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import de from '@angular/common/locales/de';
+
+registerLocaleData(de);
 
 
 @NgModule({
@@ -48,14 +54,17 @@ import { ContactComponent } from './header/menu-top/contact/contact.component';
     QuaLuuNiemComponent,
     VanPhongPhamComponent,
     SearchproductComponent,
-    ContactComponent
+    ContactComponent,
+    CheckoutComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

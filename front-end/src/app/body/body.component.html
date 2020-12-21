@@ -23,7 +23,7 @@
                                             <div href="#" class="prod-i-img">
                                                 <img class="images" [src]="book.avatar" alt="{{book.name}}">
                                                 <p class="prod-i-info">
-                                                    <a href="#" class="prod-i-favorites"><span>Danh sách yêu thích</span><i class="fa fa-heart"></i></a>
+                                                    <a href="#" class="prod-i-favorites"><span>Thêm giỏ hàng </span><i class="fa fa-heart"></i></a>
                                                     <a href="#" class="qview-btn prod-i-qview" data-toggle="modal" data-target="#myModal"><span>Xem Nhanh</span><i class="fa fa-search"></i></a>
                                                     <a class="prod-i-compare" href="#"><span>So sánh</span><i class="fa fa-bar-chart"></i></a>
                                                 </p>
@@ -41,11 +41,7 @@
                                 </div>
                             </li>
                         </ul>
-
-
                     </div>
-
-
         <!-- SẢN PHẨM end -->
 
         <!-- Special offer start-->
@@ -254,7 +250,6 @@
         <!-- Quick View Product - start -->
         <div class="modal-detail modal fade" id="myModal" role="dialog">
           <div class="modal-dialog" >
-
             <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
@@ -271,13 +266,13 @@
                         <h4 routerLink="/product">{{inforbook.name}}</h4>
                         <div class="content-tg">Tác giả: <a href="#"  style="color: rgb(212, 209, 0);">{{inforbook.tacgia}}</a></div>
                         <div class="content-ncc">Nhà cung cấp:  <a href="#" style="color: rgb(212, 209, 0);">{{inforbook.ncc}}</a></div>
-                        <div class="content-nxb"> Nhà xuất bản: <a href="#" style="color: rgb(212, 209, 0);">{{inforbook.nxb}}</a></div>
+                        <div class="content-nxb">Nhà xuất bản: <a href="#" style="color: rgb(212, 209, 0);">{{inforbook.nxb}}</a></div>
                         <div class="content-gia">Giá: <span>{{inforbook.price}}</span></div>
                         <p class="prodlist-i-addwrap">
                           <a href="#" class="prodlist-i-add">Thêm giỏ hàng</a>
                         </p>
                         <p class="prodlist-i-info">
-                         <a href="#" class="prodlist-i-favorites"><i class="fa fa-heart"></i> Danh sách yêu thích</a>
+                         <a routerLink="/withlist" class="prodlist-i-favorites"><i class="fa fa-heart"></i> Danh sách yêu thích</a>
                         </p>
                       </div>
                     </div>

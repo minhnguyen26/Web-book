@@ -21,12 +21,12 @@
     "@angular/platform-browser-dynamic": "~11.0.3",
     "@angular/router": "~11.0.3",
     "angular": "^1.8.2",
-    "bootstrap": "^3.4.1",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1002.0",

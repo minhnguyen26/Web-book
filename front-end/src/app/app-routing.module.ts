@@ -1,3 +1,4 @@
+import { CheckoutComponent } from './header/cart/checkout/checkout.component';
 import { ContactComponent } from './header/menu-top/contact/contact.component';
 import { VanPhongPhamComponent } from './body/menu-body/van-phong-pham/van-phong-pham.component';
 import { SachTiengVietComponent } from './body/menu-body/sach-tieng-viet/sach-tieng-viet.component';
@@ -38,6 +39,8 @@ const routes: Routes = [
   { path:'error-404',component:ErrorComponent },
   { path: 'search-product', component:SearchproductComponent },
   { path:'contact', component:ContactComponent },
+  { path:'checkout',component:CheckoutComponent},
+
 
 ];
 
