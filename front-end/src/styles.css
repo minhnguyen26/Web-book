@@ -1,7 +1,10 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+/* @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body{
   font-family: tahoma;
   margin: 0px auto;
   font-size: 14;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

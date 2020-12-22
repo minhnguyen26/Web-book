@@ -1,0 +1,11 @@
+.all-bg{
+  background-color: lightslategray;
+}
+.main-div mat-card {
+  padding: 0px;
+  background-color: rgb(198, 218, 230);
+
+}
+.login-form{
+  padding: 20px;
+}

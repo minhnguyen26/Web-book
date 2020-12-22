@@ -19,33 +19,35 @@ import { RankComponent } from './header/menu-top/rank/rank.component';
 import { ErrorComponent } from './header/menu-top/error/error.component';
 import { QuaLuuNiemComponent } from './body/menu-body/qua-luu-niem/qua-luu-niem.component';
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
+import { LoginComponent } from './login-admin/login/login.component';
 
 const routes: Routes = [
-  { path:'', component:Component},
-  { path:'auth', component:AuthComponent },
-  { path:'index',component:BodyComponent },
-  { path:'index',component:BannerComponent },
-  { path:'cart',component:CartComponent },
-  { path:'withlist',component:WithlistComponent },
-  { path:'compare',component:CompareComponent },
-  { path:'about-us',component:AboutUsComponent },
-  { path:'blog', component:BlogComponent },
-  { path:'product',component:ProductComponent},
-  { path:'rank',component:RankComponent },
-  { path:'englishbook',component:EnglishbookComponent },
-  { path:'qua-luu-niem',component:QuaLuuNiemComponent },
-  { path:'sach-tieng-viet',component:SachTiengVietComponent },
-  { path:'van-phong-pham',component:VanPhongPhamComponent },
-  { path:'error-404',component:ErrorComponent },
-  { path: 'search-product', component:SearchproductComponent },
-  { path:'contact', component:ContactComponent },
-  { path:'checkout',component:CheckoutComponent},
+  { path: '', component: Component },
+  { path: 'auth', component: AuthComponent },
+  { path: 'index', component: BodyComponent },
+  { path: 'index', component: BannerComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'withlist', component: WithlistComponent },
+  { path: 'compare', component: CompareComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'product', component: ProductComponent },
+  { path: 'rank', component: RankComponent },
+  { path: 'englishbook', component: EnglishbookComponent },
+  { path: 'qua-luu-niem', component: QuaLuuNiemComponent },
+  { path: 'sach-tieng-viet', component: SachTiengVietComponent },
+  { path: 'van-phong-pham', component: VanPhongPhamComponent },
+  { path: 'error-404', component: ErrorComponent },
+  { path: 'search-product', component: SearchproductComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'login', component: LoginComponent },
 
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
