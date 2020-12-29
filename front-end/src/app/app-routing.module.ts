@@ -19,7 +19,6 @@ import { RankComponent } from './header/menu-top/rank/rank.component';
 import { ErrorComponent } from './header/menu-top/error/error.component';
 import { QuaLuuNiemComponent } from './body/menu-body/qua-luu-niem/qua-luu-niem.component';
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
-import { LoginComponent } from './login-admin/login/login.component';
 
 const routes: Routes = [
   { path: '', component: Component },
@@ -41,13 +40,12 @@ const routes: Routes = [
   { path: 'search-product', component: SearchproductComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'login', component: LoginComponent },
 
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

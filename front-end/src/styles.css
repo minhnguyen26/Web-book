@@ -1,10 +1,7 @@
-/* @import '~bootstrap/dist/css/bootstrap.min.css';
-
-body{
-  font-family: tahoma;
-  margin: 0px auto;
-  font-size: 14;
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+/* @import '~bootstrap/dist/css/bootstrap.css';
+@import '~font-awesome/css/font-awesome.css'; */
+html, body{
+  font-size: 15px;
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */

@@ -28,13 +28,17 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import de from '@angular/common/locales/de';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { LoginComponent } from './login-admin/login/login.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { AuthRoutingModule } from './auth/auth-routing.module';
+import { AuthModule } from './auth/auth.module';
+import {StoreModule} from "@ngrx/store";
+import { reducers } from './_reducers';
+import { LoginUserComponent } from './header/auth/login-user/login-user.component';
+import { DetailUserComponent } from './header/auth/detail-user/detail-user.component';
 
 registerLocaleData(de);
 
@@ -63,7 +67,8 @@ registerLocaleData(de);
     SearchproductComponent,
     ContactComponent,
     CheckoutComponent,
-    LoginComponent
+    LoginUserComponent,
+    DetailUserComponent
   ],
   imports: [
     CommonModule,
@@ -77,7 +82,11 @@ registerLocaleData(de);
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    AuthRoutingModule,
+    AuthModule,
+    StoreModule.forRoot(reducers)
+
   ],
   bootstrap: [AppComponent],
 })
