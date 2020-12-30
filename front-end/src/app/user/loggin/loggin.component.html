@@ -1,0 +1,14 @@
+<form $form='ngForm' class="md-4" autocomplete="off">
+    <div class="form-group">
+        <label>User Name</label>
+        <input class ="form-control" #UserName="ngModel" name="UserName" [(ngModel)]="formModel.UserName" />
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input class ="form-control" #Password="ngModel" name="Password" [(ngModel)]="formModel.Password" />
+    </div>
+    <div class ="form-row">
+        <div class="from-group col-md-8 offset-md-2"></div>
+        <button type ="submit" class =" btn btn-lg btn-block" >Dang Nhap</button>
+      </div>
+</form>

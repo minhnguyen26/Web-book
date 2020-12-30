@@ -15,10 +15,10 @@ export class HeaderComponent implements OnInit {
   showSearchBox(): void {
     console.log(this.searchshow);
   this.searchshow = !this.searchshow;
-
 }
 onClick(event: Event): void {
   event.stopPropagation();
   this.searchshow = !this.searchshow;
 }
+
 }

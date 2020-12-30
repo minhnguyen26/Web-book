@@ -1,0 +1,46 @@
+
+   <!-- <h1 class="main-ttl"><span>Đăng ký / Đăng nhập</span></h1> -->
+              <form [formGroup]="service.formModel" autocompLete="off" (submit)="onSubmit()">
+                <div class = "form-group required">
+                    <label>Username</label>
+                    <input class="form-control" formControlName="UserName">
+                    <!-- <label class="text-danger" *ngIf="service.formModel.get('UserName').touched && service.formModel.get('UserName').errors?.required">Nhap thong tin vao o</label> -->
+                </div>
+                <div class = "form-group">
+                    <label>Email</label>
+                    <input class="form-control" formControlName="Email">
+                    <!-- <label class="text-danger" *ngIf="service.formModel.get('Email').touched && service.formModel.get('Email').errors?.email">Email khong hop le</label> -->
+
+                </div>
+                <div class = "form-group">
+                    <label>Full Name</label>
+                    <input class="form-control" formControlName="FullName">
+                </div>
+                <div formGroupName="Passwords">
+                    <div class = "form-group required">
+                        <label>Password</label>
+                        <input type ="password"class="form-control" formControlName="Password">
+                        <!-- <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.required">Mat khau khong duoc de trong</label>
+                        <label class="text-danger" *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.minlength">it nhat 4 ky tu</label> -->
+
+                    </div>
+                    <div class = "form-group required">
+                        <label>Confirm Password</label>
+                        <input type ="password"class="form-control" formControlName="ConfirmPassword">
+                        <!-- <label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.minlength">it nhat 4 ky tu</label> -->
+                        <!-- <label class="text-danger" *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.passwordMismatch">Xac thuc lai mat khau</label> -->
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label>Phone</label>
+                    <input class="form-control" formControlName="PhoneNumber">
+                </div>
+                <div class = "form-group">
+                    <label>Address</label>
+                    <input class="form-control" formControlName="Address">
+                </div>
+                  <div class ="form-row">
+                      <div class="from-group col-md-8 offset-md-2"></div>
+                      <button type ="submit" class =" btn btn-lg btn-block" [disabled]="!service.formModel.valid">Dang ky</button>
+                    </div>
+              </form>

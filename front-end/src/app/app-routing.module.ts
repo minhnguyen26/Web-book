@@ -9,9 +9,9 @@ import { CompareComponent } from './header/compare/compare.component';
 import { CartComponent } from './header/cart/cart.component';
 import { BannerComponent } from './banner/banner.component';
 import { BodyComponent } from './body/body.component';
-import { AuthComponent } from './header/auth/auth.component';
+import { RegistrationComponent } from './user/registration/registration.component';
 import { HeaderComponent } from './header/header.component';
-import { NgModule, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WithlistComponent } from './header/withlist/withlist.component';
 import { ProductComponent } from './header/menu-top/product/product.component';
@@ -20,10 +20,21 @@ import { ErrorComponent } from './header/menu-top/error/error.component';
 import { QuaLuuNiemComponent } from './body/menu-body/qua-luu-niem/qua-luu-niem.component';
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
 import { LoginComponent } from './login-admin/login/login.component';
+import { UserComponent } from './user/user.component';
+import { NgModule } from '@angular/core';
+import { LogginComponent } from './user/loggin/loggin.component';
 
-const routes: Routes = [
+
+const routes: Routes = [  
+  // {path:'',redirectTo:'user/registration',pathMatch:'full'},
+  // {
+  //   path: 'user', component:UserComponent,
+  //   children:[
+  //     {path:'registration', component: RegistrationComponent},
+  //     // {path:'loggin', component: LogginComponent}
+  //   ]
+  // },
   { path: '', component: Component },
-  { path: 'auth', component: AuthComponent },
   { path: 'index', component: BodyComponent },
   { path: 'index', component: BannerComponent },
   { path: 'cart', component: CartComponent },
@@ -42,6 +53,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'registration', component:RegistrationComponent},
+  { path: 'loggin', component:LogginComponent},
 
 
 ];

@@ -1,6 +1,5 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -24,7 +23,6 @@ import { VanPhongPhamComponent } from './body/menu-body/van-phong-pham/van-phong
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
 import { ContactComponent } from './header/menu-top/contact/contact.component';
 import { CheckoutComponent } from './header/cart/checkout/checkout.component';
-import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import de from '@angular/common/locales/de';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -34,8 +32,18 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { UserComponent } from './user/user.component';
 
+// import { ShareComponent } from './share/share.component';
 
+//minh add
+import { RegistrationComponent } from './user/registration/registration.component';
+import { UserService } from './shared/user.service';
+import  { HttpClientModule }from "@angular/common/http";
+import { NgModule } from '@angular/core';
+import {ReactiveFormsModule,FormsModule} from "@angular/forms";
+import { Routes, RouterModule } from '@angular/router';
+import {ToastrModule} from 'ngx-toastr';
 registerLocaleData(de);
 
 
@@ -63,7 +71,10 @@ registerLocaleData(de);
     SearchproductComponent,
     ContactComponent,
     CheckoutComponent,
-    LoginComponent
+    LoginComponent,
+    UserComponent,
+    RegistrationComponent,
+    // ShareComponent
   ],
   imports: [
     CommonModule,
@@ -77,8 +88,17 @@ registerLocaleData(de);
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
-  ],
-  bootstrap: [AppComponent],
+    MatToolbarModule,
+    ReactiveFormsModule,
+    BrowserModule,
+    RouterModule,
+    ToastrModule.forRoot({
+      progressBar:true
+    }),
+    FormsModule
+  ], 
+   providers: [UserService],
+  bootstrap: [AppComponent]
+
 })
 export class AppModule { }
