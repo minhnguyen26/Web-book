@@ -35,7 +35,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { AuthModule } from './auth/auth.module';
-import {StoreModule} from "@ngrx/store";
+
 import { reducers } from './_reducers';
 import { LoginUserComponent } from './header/auth/login-user/login-user.component';
 import { DetailUserComponent } from './header/auth/detail-user/detail-user.component';
@@ -85,7 +85,7 @@ registerLocaleData(de);
     MatToolbarModule,
     AuthRoutingModule,
     AuthModule,
-    StoreModule.forRoot(reducers)
+    // StoreModule.forRoot(reducers),
 
   ],
   bootstrap: [AppComponent],
