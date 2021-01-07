@@ -22,14 +22,13 @@ export class UserService {
       Address:['']  
     });
     comparePasswords(fb:FormGroup){
-      let confirmpPswrdCtrl = fb.get('ConfirmPassword');
-
-      // if(confirmpPswrdCtrl?.errors == null || 'passwordMismatch' in confirmpPswrdCtrl.errors){
-      //   if(fb.get('Password').value != confirmpPswrdCtrl?.value)
-      //     confirmpPswrdCtrl?.setErrors({passwordMismatch:true});
-      //     else
-      //     confirmpPswrdCtrl?.setErrors(null);
-      // }
+      let confirmPswrdCtrl = fb.get('ConfirmPassword');
+      if (confirmPswrdCtrl.errors == null || 'passwordMismatch' in confirmPswrdCtrl.errors) {
+        if (fb.get('Password').value != confirmPswrdCtrl.value)
+          confirmPswrdCtrl.setErrors({ passwordMismatch: true });
+        else
+          confirmPswrdCtrl.setErrors(null);
+      }
     }
     register(){
       var body = {
@@ -42,5 +41,12 @@ export class UserService {
       };
       return this.http.post(this.BaseURI+'/ApplicationUser/Register',body);
     }
+    
+  login(formData) {
+    return this.http.post(this.BaseURI + '/ApplicationUser/Login', formData);
+  }
+  getUserProfile() {
+    return this.http.get(this.BaseURI + '/UserProfile');
+  }
   }
 

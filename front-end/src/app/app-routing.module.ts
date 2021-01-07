@@ -19,7 +19,7 @@ import { RankComponent } from './header/menu-top/rank/rank.component';
 import { ErrorComponent } from './header/menu-top/error/error.component';
 import { QuaLuuNiemComponent } from './body/menu-body/qua-luu-niem/qua-luu-niem.component';
 import { SearchproductComponent } from './searchproduct/searchproduct.component';
-import { LoginComponent } from './login-admin/login/login.component';
+// import { LoginComponent } from './login-admin/login/login.component';
 import { UserComponent } from './user/user.component';
 import { NgModule } from '@angular/core';
 import { LogginComponent } from './user/loggin/loggin.component';
@@ -34,7 +34,7 @@ const routes: Routes = [
   //     // {path:'loggin', component: LogginComponent}
   //   ]
   // },
-  { path: '', component: Component },
+  { path: '', component: LogginComponent },
   { path: 'index', component: BodyComponent },
   { path: 'index', component: BannerComponent },
   { path: 'cart', component: CartComponent },
@@ -52,9 +52,10 @@ const routes: Routes = [
   { path: 'search-product', component: SearchproductComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'login', component: LoginComponent },
+  // { path: 'login', component: LoginComponent },
   { path: 'registration', component:RegistrationComponent},
-  { path: 'loggin', component:LogginComponent},
+  // { path: 'loggin', component:LogginComponent},
+  { path: 'loginn', component:LogginComponent},
 
 
 ];

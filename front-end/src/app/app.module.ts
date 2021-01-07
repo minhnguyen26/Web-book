@@ -44,6 +44,8 @@ import { NgModule } from '@angular/core';
 import {ReactiveFormsModule,FormsModule} from "@angular/forms";
 import { Routes, RouterModule } from '@angular/router';
 import {ToastrModule} from 'ngx-toastr';
+import { LogginComponent } from './user/loggin/loggin.component';
+
 registerLocaleData(de);
 
 
@@ -74,6 +76,7 @@ registerLocaleData(de);
     LoginComponent,
     UserComponent,
     RegistrationComponent,
+    LogginComponent
     // ShareComponent
   ],
   imports: [
@@ -81,7 +84,6 @@ registerLocaleData(de);
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatFormFieldModule,
@@ -90,12 +92,12 @@ registerLocaleData(de);
     MatCardModule,
     MatToolbarModule,
     ReactiveFormsModule,
-    BrowserModule,
+    BrowserModule,FormsModule,
     RouterModule,
     ToastrModule.forRoot({
-      progressBar:true
-    }),
-    FormsModule
+      progressBar: true
+    })
+    
   ], 
    providers: [UserService],
   bootstrap: [AppComponent]
